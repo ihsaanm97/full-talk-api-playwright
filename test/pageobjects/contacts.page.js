@@ -93,7 +93,18 @@ class ContactsPage extends Page {
         await this.waitAndClick(this.contact1CardSettingsButton);
         await this.waitAndClick(this.contactCardSettingsDeleteDropdown);
 
-        console.log("Contact deletion successful")
+        // console.log("Contact deletion successful")
+    }
+
+    async deleteAllContacts() {
+        let isExisting = true;
+        
+        while (isExisting) {
+            isExisting = await this.contact1CardSettingsButton.isExisting();
+            if(isExisting)
+                await this.deleteFirstContact();
+        }
+        console.log("All contacts deleted.");
     }
 
     async logOutOfTestApp() {

@@ -7,12 +7,10 @@ describe('Fetch Contacts UI only Tests - ', () => {
         await LoginPage.open();
         await LoginPage.login('ihsaan@addressbooktest.com', 'pass12345');
 
-        $('//nz-page-header-title[contains(text(), "Ihsaan Muhiyadheen")]').waitForDisplayed({timeout: 30000, timeoutMsg: 'Timed-out waiting for contacts page to appear after login.'})
+        await $('//nz-page-header-title[contains(text(), "Ihsaan Muhiyadheen")]').waitForDisplayed({timeout: 30000, timeoutMsg: 'Timed-out waiting for contacts page to appear after login.'})
 
-        //Delete the existing 3 contacts
-       await ContactsPage.deleteFirstContact();
-       await ContactsPage.deleteFirstContact();
-       await ContactsPage.deleteFirstContact();
+        //Delete all the contacts present
+        await ContactsPage.deleteAllContacts();
 
         //Create 3 contacts
         await ContactsPage.createContact("Lionel", "Messi", "8327324597", "messi@psg.com");

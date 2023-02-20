@@ -22,7 +22,7 @@ describe('Fetch Contacts UI Tests with APIs - ', () => {
         await APIClient.createContactThroughAPI({firstName: 'Kylian', lastName: 'Mbappe', email: ['mbappe@psg.com'], phone: ['573045853049'], token: authToken.token});
         
         await LoginPage.login('ihsaan@addressbooktest.com', 'pass12345');
-        $('//nz-page-header-title[contains(text(), "Ihsaan Muhiyadheen")]').waitForDisplayed({timeout: 30000, timeoutMsg: 'Timed-out waiting for contacts page to appear after login.'})
+        await $('//nz-page-header-title[contains(text(), "Ihsaan Muhiyadheen")]').waitForDisplayed({timeout: 30000, timeoutMsg: 'Timed-out waiting for contacts page to appear after login.'})
     });
 
 
