@@ -76,11 +76,6 @@ function extractContactIdsFromResponse(responseArray) {
     return contactIdList;
 }
 
-
-
-
-
-
 export async function deleteContactThroughAPI({userId, token}) {
     const config = {
         headers: { 
@@ -99,11 +94,6 @@ export async function deleteContactThroughAPI({userId, token}) {
     if(deleteResponse.status == 200 )
         return true;
 };
-
-
-
-
-
 
 export async function deleteAllContactsThroughAPI({token}) {
     const config ={
