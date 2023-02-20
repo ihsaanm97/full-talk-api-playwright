@@ -7,16 +7,19 @@ describe('Fetch Contacts UI only Tests - ', () => {
         await LoginPage.open();
         await LoginPage.login('ihsaan@addressbooktest.com', 'pass12345');
 
-        $('//nz-page-header-title[contains(text(), "Ihsaan Muhiyadheen")]').waitForDisplayed({timeout: 30000, timeoutMsg: 'Timed-out waiting for contacts page to appear after login.'})
+        await $('//nz-page-header-title[contains(text(), "Ihsaan Muhiyadheen")]').waitForDisplayed({timeout: 30000, timeoutMsg: 'Timed-out waiting for contacts page to appear after login.'})
+
+        //Delete all the contacts present
+        await ContactsPage.deleteAllContacts();
 
         //Create 3 contacts
-        await ContactsPage.createContact("Lionel", "Messi", "832732459723", "messi@psg.com");
+        await ContactsPage.createContact("Lionel", "Messi", "8327324597", "messi@psg.com");
         await ContactsPage.createContact("Cristiano", "Ronaldo", "9829348534", "ronaldo@alnassrfc.com");
-        await ContactsPage.createContact("Kylian", "Mbappe", "573045853049", "mbappe@psg.com");
+        await ContactsPage.createContact("Kylian", "Mbappe", "5730458530", "mbappe@psg.com");
     });
 
     it('Should fetch all 3 contacts -', async () => {
-        await expect(ContactsPage.page1Button).toBeDisplayed();
+        await ContactsPage.page1Button.waitForDisplayed({timeout: 20000})
         await expect(ContactsPage.page2Button).not.toBeDisplayed();
 
         await expect(ContactsPage.contact1Card).toBeDisplayed();

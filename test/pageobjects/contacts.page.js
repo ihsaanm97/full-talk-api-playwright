@@ -60,6 +60,18 @@ class ContactsPage extends Page {
         return $('//button[@nztooltiptitle="Log out"]');
     }
 
+    get contact1CardSettingsButton() {
+        return $('(//*[name()="svg" and @data-icon="setting"])[1]');
+    }
+    
+    get contactCardSettingsDeleteDropdown() {
+        return $('//div[contains(@id, "cdk-overlay-")]/div/div/ul/li[contains(text(), "Delete")]');
+    }
+
+    get contact1CardDeleteLoadingIcon() {
+        return $('.anticon-loading');
+    }
+
     async createContact(firstName, lastName, phone, email) {
 
         await this.waitAndClick(this.newContactButton);
@@ -75,6 +87,24 @@ class ContactsPage extends Page {
         await this.waitAndClick(this.saveContactsButtonDesktop);
 
         await this.waitForCreateContactFlashMessageToAppear();
+    }
+
+    async deleteFirstContact() {
+        await this.waitAndClick(this.contact1CardSettingsButton);
+        await this.waitAndClick(this.contactCardSettingsDeleteDropdown);
+
+        // console.log("Contact deletion successful")
+    }
+
+    async deleteAllContacts() {
+        let isExisting = true;
+        
+        while (isExisting) {
+            isExisting = await this.contact1CardSettingsButton.isExisting();
+            if(isExisting)
+                await this.deleteFirstContact();
+        }
+        console.log("All contacts deleted.");
     }
 
     async logOutOfTestApp() {
