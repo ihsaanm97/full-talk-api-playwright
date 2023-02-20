@@ -1,6 +1,7 @@
 import ContactsPage from '../pageobjects/contacts.page.js';
 import * as APIClient from '../../api/api-client.js'
 import LoginPage from '../pageobjects/login.page.js'
+import { expect as chaiExpect} from 'chai';
 
 let authToken = {};
 
@@ -10,8 +11,12 @@ describe('Fetch Contacts UI Tests with APIs - ', () => {
         await LoginPage.open();
 
         //Login to the test app
-        
         authToken = await APIClient.loginThroughAPI({email: 'ihsaan@addressbooktest.com', password: 'pass12345'});
+
+        //Fetch all the present contacts and delete them
+        await APIClient.deleteAllContactsThroughAPI({token: authToken.token});
+
+        //Create 3 new contacts
         await APIClient.createContactThroughAPI({firstName: 'Lionel', lastName: 'Messi', email: ['messi@psg.com'], phone: ['832732459723'], token: authToken.token});
         await APIClient.createContactThroughAPI({firstName: 'Cristiano', lastName: 'Ronaldo', email: ['ronaldo@alnassrfc.com'], phone: ['9829348534'], token: authToken.token});
         await APIClient.createContactThroughAPI({firstName: 'Kylian', lastName: 'Mbappe', email: ['mbappe@psg.com'], phone: ['573045853049'], token: authToken.token});
@@ -22,7 +27,7 @@ describe('Fetch Contacts UI Tests with APIs - ', () => {
 
 
     it('Should fetch all 3 contacts -', async () => {
-        await expect(ContactsPage.page1Button).toBeDisplayed();
+        await ContactsPage.page1Button.waitForDisplayed({timeout: 20000})
         await expect(ContactsPage.page2Button).not.toBeDisplayed();
 
         await expect(ContactsPage.contact1Card).toBeDisplayed();

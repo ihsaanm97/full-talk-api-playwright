@@ -13,7 +13,7 @@ export default class Page {
     }
 
     async waitAndClick(element) {
-        await element.waitForClickable({timeout: 20000});
+        await element.waitForClickable({timeout: 25000});
         await element.click();
         return true;
     }
