@@ -43,7 +43,7 @@ The following spec files are included in this repository:
 
 Test assertions in both spec files are performed using the UI.
 
-**NOTE** - Accounts created in the test application have a lifetime of 1 day. So if you are unable to login to the application using your registered email and password, try re-registering. One way that I manage this problem is register myself every morning before I start working on the tests. I use Postman to send the registration request seamlessly, the details of which you will find below.
+**NOTE** - Accounts created in the test application have a lifetime of 1 day. So if you are unable to login to the application using your registered email and password, try re-registering. One way that I manage this problem is by registering myself every morning before I start running the tests. I use Postman to send the registration request seamlessly, the details of which you will find below. You can also use the UI to register yourself.
 
 ### Postman Collection
 If you would like to run these requests using Postman, you can import the Collection from here:
