@@ -30,7 +30,7 @@ https://github.com/ihsaanm97/full-talk-api-testing/blob/de69af103be9660f605c88f1
 ### Test Cases
 The scenario that we are trying to test here is fetching all the contacts in a test account.
 - To view the test case in Qase, click [here](https://app.qase.io/project/DP?case=9&previewMode=modal&suite=3).
-- If you do not access to Qase, you can view the screenshot of the test case [here](https://share.anysnap.app/fXSMJa9bw9f1).
+- If you do not have access to Qase, you can view the screenshot of the test case [here](https://share.anysnap.app/fXSMJa9bw9f1).
 
 The precondition to this test case involves the following steps:
 1) Logging in to the test application.
