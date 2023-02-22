@@ -23,7 +23,7 @@ npm run wdio
 ```
 This will start a **parallel** test run of all the spec files (which contain the test cases) in the `test/specs` directory.
 - To run a single spec file, mention the path to that spec file here:
-https://github.com/ihsaanm97/full-talk-api-testing/blob/de69af103be9660f605c88f1fd4bb6ebea46d880/wdio.conf.js#L25-L29
+https://github.com/ihsaanm97/full-talk-api-testing/blob/b37483c9e3e49dd676eef841d2624be042542915/wdio.conf.js#L25-L29
 - To run both spech files one after the other in a single test run, update `maxInstances` value to `1`:
 https://github.com/ihsaanm97/full-talk-api-testing/blob/de69af103be9660f605c88f1fd4bb6ebea46d880/wdio.conf.js#L50
 
@@ -38,10 +38,9 @@ The precondition to this test case involves the following steps:
 3) Creating 3 new contacts.
 
 The following spec files are included in this repository:
-1) `ui-test.js` - All the precondition steps are preformed using the UI.
-2) `ui-api-test.js` - All the precondition steps are are performed using API calls.
-
-Test assertions in both spec files are performed using the UI.
+1) `ui-test.js` - All the precondition steps as well as test steps are preformed using the UI.
+2) `ui-api-test.js` - All the precondition steps are are performed using API calls and test steps are performed using the UI.
+3) `api-test.js` - All the precondition steps as well as test steps are performed using API calls. 
 
 **NOTE** - Accounts created in the test application have a lifetime of 1 day. So if you are unable to login to the application using your registered email and password, try re-registering. One way that I manage this problem is by registering myself every morning before I start running the tests. I use Postman to send the registration request seamlessly, the details of which you will find below. You can also use the UI to register yourself.
 
