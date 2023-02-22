@@ -7,8 +7,8 @@ describe('Fetch Contacts UI only Tests - ', () => {
         await LoginPage.open();
         await LoginPage.login('ihsaan@addressbooktest.com', 'pass12345');
 
-        await $('//nz-page-header-title[contains(text(), "Ihsaan Muhiyadheen")]').waitForDisplayed({timeout: 30000, timeoutMsg: 'Timed-out waiting for contacts page to appear after login.'})
-
+        await ContactsPage.newContactButton.waitForDisplayed({timeout: 30000, timeoutMsg: 'Timed-out waiting for contacts page to appear after login.'});
+        
         //Delete all the contacts present
         await ContactsPage.deleteAllContacts();
 
