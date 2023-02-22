@@ -23,9 +23,9 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        // './test/specs/ui/**/*ui*.js'
+        './test/specs/ui/**/*ui*.js'
         // './test/specs/ui/ui-api-test.js' 
-        './test/specs/ui/ui-test.js'
+        // './test/specs/ui/ui-test.js'
     ],
     // Patterns to exclude.
     exclude: [
