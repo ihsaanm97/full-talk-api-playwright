@@ -23,8 +23,8 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        // './test/specs/**/*.js'
-        './test/specs/api-test.js'
+        './test/specs/**/*.js'
+        // './test/specs/api-test.js'
         // './test/specs/ui-api-test.js' 
         // './test/specs/ui-test.js'
     ],
