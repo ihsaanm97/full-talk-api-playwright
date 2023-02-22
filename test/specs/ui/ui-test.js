@@ -1,5 +1,5 @@
-import LoginPage from '../pageobjects/login.page.js';
-import ContactsPage from '../pageobjects/contacts.page.js';
+import LoginPage from '../../pageobjects/login.page.js';
+import ContactsPage from '../../pageobjects/contacts.page.js';
 
 describe('Fetch Contacts UI only Tests - ', () => {
     before("Login to the test app and create 3 contacts through UI - ", async function(){
