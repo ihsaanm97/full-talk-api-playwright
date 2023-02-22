@@ -24,6 +24,7 @@ export const config = {
     //
     specs: [
         './test/specs/**/*.js'
+        // './test/specs/api-test.js'
         // './test/specs/ui-api-test.js' 
         // './test/specs/ui-test.js'
     ],

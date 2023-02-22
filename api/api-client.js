@@ -46,7 +46,7 @@ export async function createContactThroughAPI({firstName, lastName, email, phone
         console.log('Contact Created: ' + contactResponse.data.firstName + ' ' + contactResponse.data.lastName);
 }
 
-export async function getAllCustomersThroughAPI({token}) {
+export async function getAllContactsThroughAPI({token}) {
     
     const config ={
         headers: { 
@@ -102,7 +102,7 @@ export async function deleteAllContactsThroughAPI({token}) {
         }
     }  
     
-    const allContactsList = await getAllCustomersThroughAPI({token});
+    const allContactsList = await getAllContactsThroughAPI({token});
     const contactIdList = extractContactIdsFromResponse(allContactsList.data.docs);
 
     let deletedContacts = [];
