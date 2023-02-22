@@ -30,7 +30,7 @@ https://github.com/ihsaanm97/full-talk-api-testing/blob/de69af103be9660f605c88f1
 ### Test Cases
 The scenario that we are trying to test here is fetching all the contacts in a test account.
 - To view the test case in Qase, click [here](https://app.qase.io/project/DP?case=9&previewMode=modal&suite=3).
-- If you do not have access to Qase, you can view the screenshot of the test case [here](https://share.anysnap.app/fXSMJa9bw9f1).
+- If you do not have access to Qase, you can view the screenshot of the test case [here](https://share.anysnap.app/fNltGP7wNMf4).
 
 The precondition to this test case involves the following steps:
 1) Logging in to the test application.
@@ -39,7 +39,7 @@ The precondition to this test case involves the following steps:
 
 The following spec files are included in this repository:
 1) `ui-test.js` - All the precondition steps as well as test steps are preformed using the UI.
-2) `ui-api-test.js` - All the precondition steps are are performed using API calls and test steps are performed using the UI.
+2) `ui-api-test.js` - All the precondition steps performed using API calls and test steps are performed using the UI.
 3) `api-test.js` - All the precondition steps as well as test steps are performed using API calls. 
 
 **NOTE** - Accounts created in the test application have a lifetime of 1 day. So if you are unable to login to the application using your registered email and password, try re-registering. One way that I manage this problem is by registering myself every morning before I start running the tests. I use Postman to send the registration request seamlessly, the details of which you will find below. You can also use the UI to register yourself.

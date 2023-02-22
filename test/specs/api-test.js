@@ -3,7 +3,7 @@ import { expect as chaiExpect} from 'chai';
 
 let authToken = {};
 
-describe('Fetch Contacts UI Tests with APIs - ', () => {
+describe('Fetch Contacts API Tests - ', () => {
     
     before("Login to the test app and create 3 contacts through API - ", async function(){
         //Login to the test app
