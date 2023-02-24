@@ -42,7 +42,7 @@ The scenario that we are trying to test here is fetching all the contacts in a t
 - To view the test case in Qase, click [here](https://app.qase.io/project/DP?case=9&previewMode=modal&suite=3).
 - If you do not have access to Qase, you can view the screenshot of the test case [here](https://share.anysnap.app/fNltGP7wNMf4).
 
-The precondition to this test case involves the following steps:
+The precondition to this test case consists of the following steps:
 1) Logging in to the test application.
 2) Deleting all the contacts present (so that we can start with a fresh account in every test run).
 3) Creating 3 new contacts.
