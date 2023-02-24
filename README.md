@@ -49,7 +49,7 @@ The precondition to this test case consists of the following steps:
 
 The following spec files are included in this repository:
 1) `ui/ui-test.js` - All the precondition steps as well as test steps are preformed using the UI.
-2) `ui/ui-api-test.js` - All the precondition steps performed using API calls and test steps are performed using the UI.
+2) `ui/ui-api-test.js` - All the precondition steps are performed using API calls and test steps are performed using the UI.
 3) `api/api-test.js` - All the precondition steps as well as test steps are performed using API calls. 
 
 **NOTE** - Accounts created in the test application have a lifetime of 1 day. So if you are unable to login to the application using your registered email and password, try re-registering. One way that I manage this problem is by registering myself every morning before I start running the tests. I use Postman to send the registration request seamlessly, the details of which you will find below. You can also use the UI to register yourself.
