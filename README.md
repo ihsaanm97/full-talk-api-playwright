@@ -1,4 +1,4 @@
-# Leveraging APIs in Testing
+# Leveraging APIs in Testing   
 ### (FULL Talk by Ihsaan Muhiyadheen - 24th February 2023)
 
 This project was built to show how APIs can help in making our UI test cases faster, more reliable and less flaky. The application under test is [Address Book](https://mmustra-address-book.herokuapp.com/) built by [Marin Muštra](https://github.com/mmustra). Here are the links to understand the functioning of the test app:
